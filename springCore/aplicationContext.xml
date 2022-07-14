@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	<!--  ______________________Assinment1 ___________________________________________ -->
+	
+	<bean id="interestbean" class="springCoreAssignment1.Interest" factory-method="getobj"></bean>
+	
+	
+<!--  ______________________Assinment2 ___________________________________________ -->
+	
+	<bean id="Avgbean" class="springCoreAssignment2.Average">
+       <property name="subject1" value="38"></property>
+       <property name="subject2" value="28"></property>
+       <property name="subject3" value="35"></property>
+       <property name="subject4" value="37"></property>
+       <property name="subject5" value="33"></property>
+       <property name="subject6" value="29"></property>
+     </bean>
+	
+	
+<!--  ______________________Assinment3___________________________________________ -->
+	
+		<bean id="emibean" class="springCoreAssignment3.EMI">
+		<property name="rate" value="7.8"></property>
+		</bean>
+		
+<!--  ______________________Assinment4___________________________________________ -->
+		
+		<bean id="deptbean" class="springCoreAssignment4.Department">
+		<property name="deptname" value="Dev"></property>
+	    </bean>
+
+	    <bean id="embean" class="springCoreAssignment3.Employee" autowire="byType">
+		<property name="eid" value="10"></property>
+		<property name="ename" value="Shubham Patil"></property>
+		<property name="salary" value="40000"></property>
+		</bean>
+		
+		 <bean id="embean1" class="springCoreAssignment3.Employee" autowire="byType">
+		<property name="eid" value="10"></property>
+		<property name="ename" value="rajesh Patil"></property>
+		<property name="salary" value="30000"></property>
+	    </bean>
+		
+<!--  ______________________Assinment5 ___________________________________________ -->
+		
+		<bean id="numbean" class="springCoreAssignment5.Static_number" factory-method="getobje">
+		</bean>
+			
+	
+<!--  ______________________Assinment6___________________________________________ -->
+	
+	  <bean id="vowelStringbean" class="springCoreAssignment6.vowels"> 
+       <constructor-arg>
+       <array>
+       <value>Saaman</value>
+       <value>Aman</value>
+       <value>shama</value>
+       <value>rama</value>
+       <value>goli</value>
+       <value>golya</value>
+       <value>rocky</value>
+      </array>
+      </constructor-arg>
+      </bean>
+     
+ <!--  ______________________Assinment7___________________________________________ -->
+
+	
+	<bean id="mrg2bean" class="springCoreAssignment7.Merge2">
+	 	<constructor-arg>
+	 	<array>
+	 	    <value>40</value>
+	 	 	<value>50</value>
+	 	 	<value>46</value>
+	 	 	<value>60</value>
+	 	 	<value>40</value>
+	 	</array>
+	</constructor-arg>
+	</bean>
+	
+	
+	<bean id="mrgbean" class="springCoreAssignment7.Merge">
+	 	<constructor-arg>
+	 	<array>
+	 	    <value>44</value>
+	 	 	<value>34</value>
+	 	 	<value>23</value>
+	 	 	<value>66</value>
+	 	 	<value>90</value>
+	 	</array>
+	</constructor-arg>
+	<constructor-arg ref="mrg2bean"></constructor-arg>
+	</bean>
+	
+	
+<!--  ______________________Assinment8___________________________________________ -->  
+
+	 	<bean id="itmbeann" class="springCoreAssignment8.Itm">
+	 	<property name="itm">
+	 	<list>
+	 	    <value>40</value>
+	 	 	<value>50</value>
+	 	 	<value>46</value>
+	 	 	<value>60</value>
+	 	 	<value>40</value>
+	 	 	<value>29</value>
+	 	 	<value>45</value>
+	 	 	<value>66</value>
+	 	 	<value>90</value>
+	 	 	<value>67</value>
+	 	 	<value>35</value>
+	 
+	 	</list>
+	 	</property>
+	 	
+	 	</bean>
+	 
+ <!--  ______________________Assinment10___________________________________________ -->  
+	 
+	 <bean id="Studenttbean" class="springCoreAssignment10.Studentt">
+	  <property name="stud">
+	  		<map>
+	  		<entry key="virat" value="78"></entry>
+	  	    <entry key="shikhar" value="89"></entry>
+	  	   	<entry key="jash" value="67"></entry>
+	  	   	<entry key="hardik" value="88"></entry>
+	  	    
+	  		</map>
+	  </property>
+	  </bean>
+	 
+<!--  ______________________Assinment9___________________________________________ -->  
+	  
+	<bean id="citybean1" class="springCoreAssignment9.City">
+		<property name="CityName" value="Sangli"></property>
+		<property name="Distance" value="250"></property>	
+	</bean>
+	
+		<bean id="citybean2" class="springCoreAssignment9.City">
+		<property name="CityName" value="Jammu"></property>
+		<property name="Distance" value="1200"></property>	
+	</bean>
+	
+	
+	 
+</beans>
+		
+      <!--______________________Assignment11 _______________________________-->
+	
+	<!-- 1 -->
+    <bean id="rsltbean" class="springCoreAssignment11.Result">
+		<property name="maths" value="30"></property>
+		<property name="hindi" value="30"></property>
+		<property name="english" value="37"></property>
+		<property name="science" value="36"></property>
+	</bean>	
+	
+		<bean id="studentbean" class="springCoreAssignment11.Student">
+		<property name="rollno" value="21"></property>
+		<property name="studentname" value="Akash"></property>
+		<property name="dob" value="1998-05-03"></property>
+		<property name="rslt" ref="rsltbean"></property>
+
+	    </bean>
+	<!-- 2 -->
+	<bean id="rsltbean1" class="springCoreAssignment11.Result">
+		<property name="maths" value="34"></property>
+		<property name="hindi" value="32"></property>
+		<property name="english" value="31"></property>
+		<property name="science" value="37"></property>
+	</bean>	
+	
+		<bean id="studentbean1" class="springCoreAssignment11.Student">
+		<property name="rollno" value="22"></property>
+		<property name="studentname" value="akshay"></property>
+		<property name="dob" value="1998-03-02"></property>
+		<property name="rslt" ref="rsltbean1"></property>
+
+	</bean>
+	<!-- 3 -->
+	<bean id="rsltbean2" class="springCoreAssignment11.Result">
+		<property name="maths" value="20"></property>
+		<property name="hindi" value="35"></property>
+		<property name="english" value="36"></property>
+		<property name="science" value="32"></property>
+	</bean>	
+	
+		<bean id="studentbean2" class="springCoreAssignment11.Student">
+		<property name="rollno" value="23"></property>
+		<property name="studentname" value="mahi"></property>
+		<property name="dob" value="1998-04-09"></property>
+		<property name="rslt" ref="rsltbean2"></property>
+
+	</bean>
+	
+	<!-- 4 -->
+	<bean id="rsltbean3" class="springCoreAssignment1.Result">
+		<property name="maths" value="25"></property>
+		<property name="hindi" value="31"></property>
+		<property name="english" value="39"></property>
+		<property name="science" value="36"></property>
+	</bean>	
+	
+		<bean id="studentbean3" class="springCoreAssignment11.Student">
+		<property name="rollno" value="24"></property>
+		<property name="studentname" value="vinod"></property>
+		<property name="dob" value="1998-09-09"></property>
+		<property name="rslt" ref="rsltbean3"></property>
+
+	</bean>
+	<!-- 5 -->
+	<bean id="rsltbean4" class="springCoreAssignment11.Result">
+		<property name="maths" value="31"></property>
+		<property name="hindi" value="31"></property>
+		<property name="english" value="37"></property>
+		<property name="science" value="34"></property>
+	</bean>	
+	    <bean id="studentbean4" class="springCoreAssignment11.Student">
+		<property name="rollno" value="25"></property>
+		<property name="studentname" value="prasad"></property>
+		<property name="dob" value="1998-01-09"></property>
+		<property name="rslt" ref="rsltbean4"></property>
+		</bean>
+		
+<!--  ______________________Assinment12 ___________________________________________ -->
+
+	<bean id="empbean" class="springCoreAssignment12.Employee">
+		<property name="empname" value="Mayur"></property>
+		<property name="workLocation" value="Pune"></property>
+		<property name="dob" value="2021-02-02"></property>
+		<property name="dept" value="Dev"></property>
+	    <property name="sal" value="34000"></property>
+	</bean>	
+	
+	<bean id="empbean1" class="springCoreAssignment12.Employee">
+		<property name="empname" value="Nikhil"></property>
+		<property name="workLocation" value="Hydrabad"></property>
+		<property name="dob" value="2021-02-02"></property>
+		<property name="dept" value="AWS"></property>
+	    <property name="sal" value="34000"></property>
+	</bean>	
+	
+	<bean id="empbean2" class="springCoreAssignment12.Employee">
+		<property name="empname" value="Ajay"></property>
+		<property name="workLocation" value="Indore"></property>
+		<property name="dob" value="2021-02-02"></property>
+		<property name="dept" value="Testing"></property>
+	    <property name="sal" value="34000"></property>
+	</bean>	
+	
+	<bean id="empbean3" class="springCoreAssignment12.Employee">
+		<property name="empname" value="Rakesh"></property>
+		<property name="workLocation" value="Benglore"></property>
+		<property name="dob" value="2021-02-02"></property>
+		<property name="dept" value="ANGULAR"></property>
+	    <property name="sal" value="34000"></property>
+	</bean>	
+	
+<!--  ______________________Assinment14 ___________________________________________ -->
+
+	
+	  <bean id="cirbean" class="springCoreAssignment14.Circle"> 
+      <constructor-arg value="13" type="double"></constructor-arg>  
+      </bean>  
+      
+      <bean id="Squrbean" class="springCoreAssignment14.Square"> 
+      <constructor-arg value="24" type="double"></constructor-arg>  
+      </bean>  
+      
+       <bean id="Rectbean" class="springCoreAssignment14.Rectangle"> 
+      <constructor-arg value="24" type="double"></constructor-arg> 
+      <constructor-arg value="15" type="double"></constructor-arg> 
+      </bean>
+       
+
+
+<!--  ______________________Assinment15___________________________________________ -->  
+
+	<bean id="catebean" class="springCoreAssignment15.Category">
+		<property name="catname" value="Polo"></property>
+	</bean>	
+	
+	
+	<bean id="itembean" class="springCoreAssignment15.item">
+		<property name="itemid" value="1"></property>
+		<property name="itemname" value="Polo"></property>
+		<property name="itemprice" value="Hydrabad"></property>
+		<property name="cat" ref="catebean"></property>
+	</bean>	
+	
+	 
+	<bean id="custbean" class="springCoreAssignment15.Customer">
+		<property name="catname" value="Polo"></property>
+		<property name="item" ref="itembean"></property>
+	</bean>	
+	
+
+
+
+
